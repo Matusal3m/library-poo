@@ -9,14 +9,16 @@ public class Lending {
   private Date startDate;
   private Date endDate;
   private Boolean isReturned;
+  private UserAdminister userAdminister;
 
-  public Lending(int id, User user, Book book, Date startDate, Date endDate, Boolean isReturned) {
+  public Lending(int id, User user, Book book, Date startDate, Date endDate, Boolean isReturned, UserAdminister userAdminister) {
     this.id = id;
     this.user = user;
     this.book = book;
     this.startDate = startDate;
     this.endDate = endDate;
     this.isReturned = isReturned;
+    this.userAdminister = userAdminister;
   }
 
   public int getId() {
@@ -37,6 +39,10 @@ public class Lending {
 
   public Date getEndDate() {
     return endDate;
+  }
+
+  public UserAdminister getUserAdminister() {
+    return userAdminister;
   }
 
   public Boolean getIsReturned() {
